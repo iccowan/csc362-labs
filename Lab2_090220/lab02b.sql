@@ -35,4 +35,3 @@ VALUES
 
 /* Display the table */
 SELECT * FROM instructors;
-
