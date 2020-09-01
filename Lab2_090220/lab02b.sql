@@ -35,3 +35,5 @@ VALUES
 
 /* Display the table */
 SELECT * FROM instructors;
+
+/* End of file lab02b.sql */
