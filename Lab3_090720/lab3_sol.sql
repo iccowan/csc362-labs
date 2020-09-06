@@ -20,7 +20,7 @@ USE movie_ratings;
 
 -- Now, create the 3 tables that we need and their fields
 -- movies Table
-SHOW CREATE TABLE movies(
+CREATE TABLE movies(
     PRIMARY KEY  (movie_id),
     movie_id     INT(11)      NOT NULL UNSIGNED AUTO_INCREMENT,
     movie_title  VARCHAR(256) NOT NULL,
@@ -29,7 +29,7 @@ SHOW CREATE TABLE movies(
 );
 
 -- consumers Table
-SHOW CREATE TABLE consumers(
+CREATE TABLE consumers(
     PRIMARY KEY (consumer_id),
     consumer_id INT(11)      NOT NULL UNSIGNED AUTO_INCREMENT,
     first_name  VARCHAR(64)  NOT NULL,
@@ -41,7 +41,7 @@ SHOW CREATE TABLE consumers(
 );
 
 -- ratings Table
-SHOW CREATE TABLE ratings(
+CREATE TABLE ratings(
     PRIMARY KEY  (movie_id, consumer_id),
     movie_id     INT(11)    NOT NULL UNSIGNED,
     FOREIGN KEY  (movie_id)
