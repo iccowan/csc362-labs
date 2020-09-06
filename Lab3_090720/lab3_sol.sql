@@ -77,13 +77,18 @@ VALUES (1, 1, 4, '2010-09-02 10:54:19'),
        (2, 3, 2, '2017-03-27 00:12:48'),
        (2, 4, 4, '2018-08-02 00:54:42');
 
-/* Preview the tables
+/* Confirm that all of the tables were created correctly */
+SHOW CREATE TABLE movies;
+SHOW CREATE TABLE consumers;
+SHOW CREATE TABLE ratings;
+
+/* Preview the tables */
 SELECT *
   FROM movies;
 SELECT *
   FROM consumers;
 SELECT *
-  FROM ratings; */
+  FROM ratings;
 
 /* Generate a report of the ratings using natural join */
 SELECT consumer_first_name, consumer_last_name, movie_title, rating_number_stars
@@ -186,6 +191,12 @@ VALUES (1, 1, 4, '2010-09-02 10:54:19'),
        (1, 4, 1, '2016-10-02 23:58:12'),
        (2, 3, 2, '2017-03-27 00:12:48'),
        (2, 4, 4, '2018-08-02 00:54:42');
+
+/* Confirm that all of the tables were created correctly */
+SHOW CREATE TABLE movies;
+SHOW CREATE TABLE movie_genres;
+SHOW CREATE TABLE consumers;
+SHOW CREATE TABLE ratings;
 
 /* Preview the tables */
 SELECT *
