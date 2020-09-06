@@ -191,11 +191,13 @@ VALUES (1, 1, 4, '2010-09-02 10:54:19'),
 SELECT *
   FROM movies;
 SELECT *
+  FROM movie_genres;
+SELECT *
   FROM consumers;
 SELECT *
   FROM ratings;
 
-/* Natural join to view genres of the movies */
+/* Natural join to view genres of the movies
 SELECT movie_title, movie_genre
 FROM movies
-    NATURAL JOIN movie_genres;
+    NATURAL JOIN movie_genres; */
