@@ -36,3 +36,31 @@ CREATE TABLE customers (
     customer_phone VARCHAR(10),
     is_active TINYINT(1) NOT NULL DEFAULT(1)
 );
+
+CREATE TABLE purchases (
+    PRIMARY_KEY (purchase_id),
+    FOREIGN_KEY (customer_id)
+                REFERENCES customers (customer_id),
+    FOREIGN_KEY (rug_id)
+                REFERENCES rugs (rug_id),
+    purchase_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
+    customer_id INT(11) unsigned NOT NULL,
+    rug_id INT(11) unsigned NOT NULL,
+    date_of_sale DATE NOT NULL,
+    sale_price FLOAT(7,2) NOT NULL,
+    profit FLOAT(7,2) NOT NULL,
+    date_returned DATE
+);
+
+CREATE TABLE trials (
+    PRIMARY_KEY (trial_id),
+    FOREIGN_KEY (customer_id)
+                REFERENCES customers (customer_id),
+    FOREIGN_KEY (rug_id)
+                REFERENCES rugs (rug_id),
+    customer_id INT(11) unsigned NOT NULL,
+    rug_id INT(11) unsigned NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    actual_return_date DATE
+);
