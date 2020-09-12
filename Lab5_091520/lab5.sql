@@ -19,7 +19,7 @@ USE flying_carpets;
 
 /* Create the necessary tables */
 CREATE TABLE rugs (
-    PRIMARY_KEY (rug_id),
+    PRIMARY KEY (rug_id),
     rug_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
     description VARCHAR(64) NOT NULL,
     purchase_price FLOAT(7,2) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE rugs (
 );
 
 CREATE TABLE customers (
-    PRIMARY_KEY (customer_id),
+    PRIMARY KEY (customer_id),
     customer_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
     customer_name VARCHAR(64) NOT NULL,
     customer_address VARCHAR(256) NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE customers (
 );
 
 CREATE TABLE purchases (
-    PRIMARY_KEY (purchase_id),
-    FOREIGN_KEY (customer_id)
+    PRIMARY KEY (purchase_id),
+    FOREIGN KEY (customer_id)
                 REFERENCES customers (customer_id),
-    FOREIGN_KEY (rug_id)
+    FOREIGN KEY (rug_id)
                 REFERENCES rugs (rug_id),
     purchase_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
     customer_id INT(11) unsigned NOT NULL,
@@ -53,10 +53,10 @@ CREATE TABLE purchases (
 );
 
 CREATE TABLE trials (
-    PRIMARY_KEY (trial_id),
-    FOREIGN_KEY (customer_id)
+    PRIMARY KEY (trial_id),
+    FOREIGN KEY (customer_id)
                 REFERENCES customers (customer_id),
-    FOREIGN_KEY (rug_id)
+    FOREIGN KEY (rug_id)
                 REFERENCES rugs (rug_id),
     customer_id INT(11) unsigned NOT NULL,
     rug_id INT(11) unsigned NOT NULL,
