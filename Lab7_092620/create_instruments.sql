@@ -23,7 +23,7 @@ CREATE TABLE instruments (
     instrument_id      INT AUTO_INCREMENT,
     instrument_type    VARCHAR(32)
 );
-
+/*
 -- This was what I wanted, but is not legal in MariaDB.
 CREATE TABLE student_instruments (
     PRIMARY KEY (student_id, instrument_id),
@@ -48,7 +48,7 @@ VALUES ('Neo'),
        ('Trinity'),
        ('Cypher'),
        ('Tank');
-
+*/
 -- Buy some instruments.
 -- Create a prepared statement for this; to allow you to reset the
 -- database when debugging.
@@ -62,7 +62,7 @@ VALUES ('Guitar'),
        ('Melodica'),
        ('Trombone'),
        ('Keyboard');
-
+/*
 -- Now check out some instruments to students.
 INSERT INTO student_instruments (student_id, instrument_id)
 VALUES (1, 1),
@@ -72,3 +72,4 @@ VALUES (1, 1),
 
 INSERT INTO student_instruments (student_id, instrument_id, checkin_date)
 VALUES (1 , 1, '2020-10-01');
+*/

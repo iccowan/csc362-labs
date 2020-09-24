@@ -23,7 +23,7 @@ class DBConnect {
 
     function __construct() {
         // Open the file and retrieve the required information
-        $env = fopen(".env", "r") or die(".env file does not exist! Please
+        $env = fopen("../.env", "r") or die(".env file does not exist! Please
                                               reference DBConnect.php for setup instructions");
         $information = array();
 
