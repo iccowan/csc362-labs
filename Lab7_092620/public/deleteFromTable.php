@@ -92,15 +92,16 @@ for($i = 0; $i < $all_results_rows; $i++) {
 // Add more records, if requested
 if(isset($_POST["resetdb"])) {
 	$conn->query("INSERT INTO instruments (instrument_type)
-		      VALUES ('Guitar'),
-		             ('Trumpet'),
-			     ('Flute'),
-			     ('Theramin'),
-			     ('Violin'),
-			     ('Tuba'),
-			     ('Melodica'),
-			     ('Trombone'),
-			     ('Keyboard');");
+                             VALUES ('Guitar'),
+                                    ('Trumpet'),
+                                    ('Flute'),
+                                    ('Theramin'),
+                                    ('Violin'),
+                                    ('Tuba'),
+                                    ('Melodica'),
+                                    ('Trombone'),
+                                    ('Keyboard')
+                 ");
 }
 
 // Query the database again since we've already used this information
