@@ -83,9 +83,9 @@ $stmt->bind_param('i', $id);
 // Loop through all the rows and if the user requested that they be deleted, delete it
 for($i = 0; $i < $all_results_rows; $i++) {
 	$id = $all_results[$i][0];
-    if(isset($_POST["delete" . $id])) {
+    if(isset($_POST["delete" . $id]) && !$stmt->execute()) {
         // Bind and execute the prepared statement
-	    $stmt->execute();
+	    echo $conn->error();
     }
 }
 
