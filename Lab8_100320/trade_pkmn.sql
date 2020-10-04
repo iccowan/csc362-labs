@@ -29,6 +29,7 @@ VALUES ('poke1', 1),
 
 /* Create functions to get a trainer's id and set a trainer's id for pokemon */
 DROP FUNCTION IF EXISTS get_trainer_id;
+DROP PROCEDURE IF EXISTS trade_pokemon;
 
 CREATE FUNCTION get_trainer_id(poke_id VARCHAR(64)) RETURNS INT
 RETURN (SELECT trainer_id
